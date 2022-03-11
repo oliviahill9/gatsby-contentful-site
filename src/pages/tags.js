@@ -2,10 +2,12 @@ import React from "react"
 
 import Layout from "../components/Layout"
 
-export default function Home() {
+const Tags = () => {
   return (
     <Layout>
-      <h1>Home Page</h1>
+      <h1>Tags Page</h1>
     </Layout>
   )
 }
+
+export default Tags
