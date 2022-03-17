@@ -1,11 +1,14 @@
 import React from "react"
 
 import Layout from "../components/Layout"
+import AllReviews from "../components/AllReviews"
 
 const Reviews = () => {
   return (
     <Layout>
-      <h1>Reviews Page</h1>
+      <main className="page">
+        <AllReviews />
+      </main>
     </Layout>
   )
 }

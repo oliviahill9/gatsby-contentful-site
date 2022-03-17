@@ -1,8 +1,11 @@
 import React from "react"
 
 import Layout from "../components/Layout"
+import { Link, graphql } from "gatsby"
+import ReviewsList from "../components/ReviewsList"
 
-const Contact = () => {
+const Contact = ({ data }) => {
+  const reviews = data.allContentfulReview.nodes
   return (
     <Layout>
       <main className="page">
@@ -53,9 +56,32 @@ const Contact = () => {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h5>Check out these movies!</h5>
+          <ReviewsList reviews={reviews} />
+        </section>
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulReview(
+      sort: { fields: title, order: ASC }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
+        id
+        title
+        runTime
+        release
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`
 
 export default Contact

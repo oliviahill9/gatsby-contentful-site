@@ -34,7 +34,7 @@ export const Navbar = () => {
             activeClassName="active-link"
             onClick={() => setShow(false)}
           >
-            Reviews
+            Movies
           </Link>
           <Link
             to="/tags"

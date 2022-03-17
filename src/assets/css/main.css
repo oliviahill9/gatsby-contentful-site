@@ -513,6 +513,7 @@ form > *:last-child {
 }
 
 .featured-recipes > h5 {
+  margin-top: 50px;
   text-align: center;
   max-width: 100%;
 }
@@ -784,5 +785,5 @@ form > *:last-child {
   border-bottom: 1px solid var(--grey-500);
   padding-bottom: 0.75rem;
   color: var(--primary-500);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
