@@ -3,10 +3,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllReviews from "../components/AllReviews"
+import Seo from "../components/SEO"
 
 export default function Home() {
   return (
     <Layout>
+      <Seo title="Home " description="This is the home page" />
       <main className="page">
         <header className="hero">
           <StaticImage

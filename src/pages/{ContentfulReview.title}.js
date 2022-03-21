@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
 import Layout from "../components/Layout"
 import slugify from "slugify"
+import Seo from "../components/SEO"
 
 const ReviewTemplate = ({ data }) => {
   const {
@@ -20,6 +21,7 @@ const ReviewTemplate = ({ data }) => {
   const { tags, quotes, director, cast } = content
   return (
     <Layout>
+      <Seo title={title} synopsis={synopsis} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">
